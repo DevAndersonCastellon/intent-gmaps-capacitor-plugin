@@ -10,15 +10,14 @@ export class IntentGmapsWeb extends WebPlugin implements IntentGmapsPlugin {
     }
 
     async openMap(geo: Geo): Promise<boolean> {
-        // logic here
-        console.log(geo);
+        window.open(geo.url, '_blank')
         return true;
     }
 }
 
 const IntentGmaps = new IntentGmapsWeb();
 
-export { IntentGmaps };
+export { IntentGmaps, Geo };
 
 import { registerWebPlugin } from '@capacitor/core';
 import { Geo } from './interfaces';
