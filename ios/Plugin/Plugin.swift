@@ -14,4 +14,19 @@ public class IntentGmaps: CAPPlugin {
             "value": value
         ])
     }
+    
+    @objc func openMap(_ call: CAPPluginCall) {
+        let inputURL = call.getString("url") ?? ""
+        if (inputURL != "") {
+            if let safeURL = URL(string: inputURL) {
+                UIApplication.shared.open(safeURL)
+                call.resolve()
+            } else {
+                call.reject("Failed to open Safari")
+            }
+        } else {
+            call.reject("Invalid URL provided")
+        }
+    }
+    
 }
