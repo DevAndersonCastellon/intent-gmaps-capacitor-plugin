@@ -2,6 +2,10 @@
 # Be sure to run `pod lib lint IntentGmaps.podspec' to ensure this is a
 # valid spec before submitting.
 #
+# Also, .podspec file should be named according to the plugin's name
+# i.e. @dev-name/plugin-name should become DevNamePluginName both as file name
+# and in spec's name.
+#
 # Any lines starting with a # are optional, but their use is encouraged
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
 #
